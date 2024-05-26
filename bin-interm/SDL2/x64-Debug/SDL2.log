@@ -1,0 +1,4 @@
+﻿  Game.cpp
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\SDL2\src\Game.cpp(44,29): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\SDL2\src\Game.cpp(47,25): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+  SDL2.vcxproj -> C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\bin\SDL2\x64-Debug\SDL2.exe
