@@ -33,10 +33,16 @@
     <ClCompile Include="src\StateManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Entities\Entity.cpp">
+    <ClCompile Include="src\entities\Entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Tilemap\Tilemap.cpp">
+    <ClCompile Include="src\tilemap\Tilemap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\CollisionChecker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,11 +59,34 @@
     <ClInclude Include="src\StateManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Entities\Entity.h">
+    <ClInclude Include="src\entities\Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Tilemap\Tilemap.h">
+    <ClInclude Include="src\tilemap\Tilemap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\entities\Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\CollisionChecker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\images\Dragonheart.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\Soldier-Blue.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\Soldier-Red.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\Bricks.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="res\maps\dungeon.txt" />
   </ItemGroup>
 </Project>

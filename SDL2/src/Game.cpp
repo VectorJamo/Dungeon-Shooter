@@ -2,6 +2,7 @@
 #include <iostream>
 #include "utils/Macros.h"
 
+bool Game::running;
 Game::Game(int width, int height, const char* title) {
 	display = new Display(width, height, title);
 	running = true;
@@ -19,10 +20,12 @@ void Game::run() {
 	while (running) {
 		SDL_Event ev;
 		while (SDL_PollEvent(&ev)) {
-			if (ev.type == SDL_QUIT) {
+			if (ev.type == SDL_QUIT)
 				running = false;
-			}
+
+			StateManager::currentState->handleInput(ev);
 		}
+
 		// Clear the screen
 		display->clear(0, 0, 0, 255);
 		

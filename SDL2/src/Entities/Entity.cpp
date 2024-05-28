@@ -4,7 +4,12 @@
 
 #include <iostream>
 
-Entity::Entity(const char* path, int x, int y, int width, int height) {
+Entity::Entity(const char* path, float x, float y, int width, int height) {
+	this->x = x;
+	this->y = y;
+	this->width = width;
+	this->height = height;
+
 	entityImage = IMG_LoadTexture(Display::getRendererInstance(), path);
 	if (!entityImage){
 		DEBUG_LOG("Failed to load entity image.");
@@ -15,10 +20,10 @@ Entity::~Entity() {
 	SDL_DestroyTexture(entityImage);
 }
 
-void Entity::setXPos(int x){
+void Entity::setXPos(float x){
 	this->x = x;
 }
-void Entity::setYPos(int y) {
+void Entity::setYPos(float y) {
 	this->y = y;
 }
 void Entity::setWidth(int width) {

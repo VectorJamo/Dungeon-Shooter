@@ -3,18 +3,18 @@
 
 class Entity {
 protected:
-	int x, y, width, height;
+	float x, y, width, height;
 	SDL_Texture* entityImage;
 
 public:
-	Entity(const char* path, int x, int y, int width, int height);
+	Entity(const char* path, float x, float y, int width, int height);
 	~Entity();
 
 	virtual void tick() = 0;
 	virtual void render() = 0;
 
-	void setXPos(int x);
-	void setYPos(int y);
+	void setXPos(float x);
+	void setYPos(float y);
 	void setWidth(int width);
 	void setHeight(int height);
 	

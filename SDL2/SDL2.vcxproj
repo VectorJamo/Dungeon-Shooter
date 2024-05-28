@@ -155,22 +155,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Entities\Entity.cpp" />
+    <ClCompile Include="src\entities\CollisionChecker.cpp" />
+    <ClCompile Include="src\entities\Player.cpp" />
+    <ClCompile Include="src\entities\Entity.cpp" />
     <ClCompile Include="src\GameState.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\graphics\Display.cpp" />
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\StateManager.cpp" />
     <ClCompile Include="src\utils\Macros.h" />
-    <ClCompile Include="src\Tilemap\Tilemap.cpp" />
+    <ClCompile Include="src\tilemap\Tilemap.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\entities\CollisionChecker.h" />
+    <ClInclude Include="src\entities\Player.h" />
     <ClInclude Include="src\GameState.h" />
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\graphics\Display.h" />
-    <ClInclude Include="src\Entities\Entity.h" />
+    <ClInclude Include="src\entities\Entity.h" />
     <ClInclude Include="src\StateManager.h" />
-    <ClInclude Include="src\Tilemap\Tilemap.h" />
+    <ClInclude Include="src\tilemap\Tilemap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\images\Bricks.png" />
+    <Image Include="res\images\Dragonheart.png" />
+    <Image Include="res\images\Soldier-Blue.png" />
+    <Image Include="res\images\Soldier-Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="res\maps\dungeon.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

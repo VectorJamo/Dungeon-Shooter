@@ -10,7 +10,7 @@ private:
 	static const unsigned int FPS = 60;
 	float lastTime = 0.0f;
 public:
-	bool running;
+	static bool running;
 
 public:
 	Game(int width, int height, const char* title);
