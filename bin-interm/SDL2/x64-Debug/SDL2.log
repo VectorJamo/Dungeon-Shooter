@@ -1,2 +1,16 @@
-﻿  CollisionChecker.cpp
-  SDL2.vcxproj -> C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\bin\SDL2\x64-Debug\SDL2.exe
+﻿  Application.cpp
+  Game.cpp
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\SDL2\src\Game.cpp(47,29): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\SDL2\src\Game.cpp(49,25): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+  GameState.cpp
+  Player.cpp
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\SDL2\src\entities\Player.cpp(91,20): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\SDL2\src\entities\Player.cpp(91,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\SDL2\src\entities\Player.cpp(91,23): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\SDL2\src\entities\Player.cpp(91,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\SDL2\src\entities\Player.cpp(91,26): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\SDL2\src\entities\Player.cpp(91,26): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\SDL2\src\entities\Player.cpp(91,33): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\SDL2\src\entities\Player.cpp(91,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  SDL2.vcxproj -> C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Shooter\bin\SDL2\x64-Debug\SDL2.exe

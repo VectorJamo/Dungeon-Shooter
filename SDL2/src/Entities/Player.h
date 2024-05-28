@@ -20,7 +20,7 @@ public:
 	Player(const char* path, float x, float y, int width, int height, Tilemap* map);
 	~Player();
 
-	void setCurrentClipRect();
+	void setCurrentClipRect(SDL_Rect rect);
 
 	void tick() override;
 	void render() override;

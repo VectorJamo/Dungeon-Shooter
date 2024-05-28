@@ -46,9 +46,14 @@ Player::Player(const char* path, float x, float y, int width, int height, Tilema
 }
 
 Player::~Player() {
+	delete[] leftClipRects;
+	delete[] rightClipRects;
+	delete[] upClipRects;
+	delete[] downClipRects;
 }
 
-void Player::setCurrentClipRect() {
+void Player::setCurrentClipRect(SDL_Rect rect) {
+	currentClipRect = rect;
 }
 
 

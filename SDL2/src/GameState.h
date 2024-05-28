@@ -7,7 +7,6 @@
 class GameState: public StateManager {
 private:
 	Tilemap* map;
-
 	Player* player;
 
 public:

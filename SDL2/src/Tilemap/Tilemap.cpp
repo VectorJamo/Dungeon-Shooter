@@ -17,6 +17,12 @@ Tilemap::Tilemap(const char* filePath) {
 }
 
 Tilemap::~Tilemap() {
+	for (int i = 0; i < mapRows; i++) {
+		delete[] tileMap[i];
+	}
+	delete[] tileMap;
+
+	SDL_DestroyTexture(brickTexture);
 }
 
 void Tilemap::tick() {

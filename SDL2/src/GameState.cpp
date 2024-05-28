@@ -11,8 +11,8 @@ GameState::GameState() {
 }
 
 GameState::~GameState() {
-
-
+	delete map;
+	delete player;
 }
 
 void GameState::handleInput(SDL_Event& ev) {
