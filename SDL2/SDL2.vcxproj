@@ -155,6 +155,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\entities\Laser.cpp" />
+    <ClCompile Include="src\entities\Cockroach.cpp" />
     <ClCompile Include="src\entities\CollisionChecker.cpp" />
     <ClCompile Include="src\entities\Player.cpp" />
     <ClCompile Include="src\entities\Entity.cpp" />
@@ -167,6 +169,8 @@
     <ClCompile Include="src\tilemap\Tilemap.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\entities\Laser.h" />
+    <ClInclude Include="src\entities\Cockroach.h" />
     <ClInclude Include="src\entities\CollisionChecker.h" />
     <ClInclude Include="src\entities\Player.h" />
     <ClInclude Include="src\GameState.h" />
@@ -179,6 +183,7 @@
   <ItemGroup>
     <Image Include="res\images\Bricks.png" />
     <Image Include="res\images\Dragonheart.png" />
+    <Image Include="res\images\roach.png" />
     <Image Include="res\images\Soldier-Blue.png" />
     <Image Include="res\images\Soldier-Red.png" />
   </ItemGroup>

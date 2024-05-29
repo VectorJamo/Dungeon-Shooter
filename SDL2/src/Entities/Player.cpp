@@ -76,11 +76,10 @@ void Player::tick() {
 	CollisionAxes axes = checkCollision(this, map, dx, dy);
 	if (axes.xCollision) {
 		dx = 0;
-		std::cout << "X-Collision" << std::endl;
+		
 	}
 	if (axes.yCollision) {
 		dy = 0;
-		std::cout << "Y-Collision" << std::endl;
 	}
 
 	x += dx;

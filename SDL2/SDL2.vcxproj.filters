@@ -45,6 +45,12 @@
     <ClCompile Include="src\entities\CollisionChecker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\entities\Cockroach.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\Laser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\graphics\Display.h">
@@ -71,6 +77,12 @@
     <ClInclude Include="src\entities\CollisionChecker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\entities\Cockroach.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\Laser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\images\Dragonheart.png">
@@ -83,6 +95,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="res\images\Bricks.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\roach.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

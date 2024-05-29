@@ -1,6 +1,2 @@
-﻿  Player.cpp
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Player.cpp(93,110): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Player.cpp(93,110): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Player.cpp(93,117): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Player.cpp(93,117): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+﻿  Laser.cpp
   SDL2.vcxproj -> C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\bin\SDL2\x64-Debug\SDL2.exe

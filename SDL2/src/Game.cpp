@@ -27,7 +27,7 @@ void Game::run() {
 		}
 
 		// Clear the screen
-		display->clear(0, 0, 0, 255);
+		display->clear(10, 10, 10, 255);
 		
 		// Tick
 		StateManager::currentState->tick();
