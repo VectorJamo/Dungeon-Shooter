@@ -10,6 +10,8 @@ Entity::Entity(const char* path, float x, float y, int width, int height) {
 	this->width = width;
 	this->height = height;
 
+	collideRect = { 0, 0, width, height };
+
 	entityImage = IMG_LoadTexture(Display::getRendererInstance(), path);
 	if (!entityImage){
 		DEBUG_LOG("Failed to load entity image.");
@@ -33,6 +35,10 @@ void Entity::setHeight(int height) {
 	this->height = height;
 }
 
+void Entity::setCollisionRect(int x, int y, int width, int height) {
+	collideRect = { x, y, width, height };
+}
+
 int Entity::getXPos() const {
 	return x;
 }
@@ -44,6 +50,9 @@ int Entity::getWidth() const {
 }
 int Entity::getHeight() const {
 	return height;
+}
+const SDL_Rect& Entity::getCollideRect() const {
+	return collideRect;
 }
 
 

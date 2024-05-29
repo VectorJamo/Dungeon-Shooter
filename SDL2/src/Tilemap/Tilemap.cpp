@@ -28,12 +28,17 @@ Tilemap::~Tilemap() {
 void Tilemap::tick() {
 }
 
-void Tilemap::render() {
+void Tilemap::render(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight) {
 	for (int i = 0; i < mapRows; i++) {
 		for (int j = 0; j < mapCols; j++) {
 			if (tileMap[i][j] != '0') {
+				int tileWorldX = j*tileSize;
+				int tileWorldY = i*tileSize;
+				int tileScreenX = tileWorldX - ((playerWorldX + playerWidth/2) - Display::getScreenWidth()/2);
+				int tileScreenY = tileWorldY - ((playerWorldY + playerHeight/2)- Display::getScreenHeight()/2);
+				
 				SDL_Rect src = { 0, 0, tileSize, tileSize };
-				SDL_Rect dest = { j*tileSize, i*tileSize, tileSize, tileSize };
+				SDL_Rect dest = { tileScreenX, tileScreenY, tileSize, tileSize };
 
 				SDL_RenderCopy(Display::getRendererInstance(), brickTexture, &src, &dest);
 			}

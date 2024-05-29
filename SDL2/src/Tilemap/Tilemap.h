@@ -5,8 +5,8 @@
 
 class Tilemap {
 private:
-	static const int mapCols = 50, mapRows = 50;
-	static const int tileSize = 16;
+	static const int mapCols = 90, mapRows = 90;
+	static const int tileSize = 32;
 
 	unsigned char** tileMap;
 
@@ -20,7 +20,7 @@ public:
 	~Tilemap();
 
 	void tick();
-	void render();
+	void render(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight);
 
 	inline unsigned char** getTileMap() { return tileMap; } // Cast this return type to unsigned char** to access the values.
 	inline int getTileSize() { return tileSize; }

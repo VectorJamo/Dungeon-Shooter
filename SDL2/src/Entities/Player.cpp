@@ -6,10 +6,6 @@
 #include "CollisionChecker.h"
 #include <iostream>
 
-void Player::playAnimation()
-{
-}
-
 Player::Player(const char* path, float x, float y, int width, int height, Tilemap* map): Entity(path, x, y, width, height) {
 	this->map = map;
 
@@ -58,19 +54,23 @@ void Player::setCurrentClipRect(SDL_Rect rect) {
 
 
 void Player::tick() {
-
 	const Uint8* keyState = SDL_GetKeyboardState(NULL);
+	direction = 'X';
 	if (keyState[SDL_SCANCODE_W]) {
 		dy = -speed;
+		direction = 'U';
 	}
 	if (keyState[SDL_SCANCODE_S]) {
 		dy = speed;
+		direction = 'D';
 	}
 	if (keyState[SDL_SCANCODE_A]) {
 		dx = -speed;
+		direction = 'L';
 	}
 	if (keyState[SDL_SCANCODE_D]) {
 		dx = speed;
+		direction = 'R';
 	}
 
 	CollisionAxes axes = checkCollision(this, map, dx, dy);
@@ -85,15 +85,51 @@ void Player::tick() {
 
 	x += dx;
 	y += dy;
+	playAnimation();
+
 }
 
 void Player::render() {
-	SDL_Rect dest = { x, y, width, height };
-	SDL_SetRenderDrawColor(Display::getRendererInstance(), 255, 0, 0, 255);
-	SDL_RenderDrawRect(Display::getRendererInstance(), &dest);
+	SDL_Rect dest = { Display::getScreenWidth()/2 - (int)width/2, Display::getScreenHeight()/2 - (int)height/2, width, height};
 	SDL_RenderCopy(Display::getRendererInstance(), entityImage, &currentClipRect, &dest);
 
 	dx = 0;
 	dy = 0;
+}
+
+void Player::playAnimation() {
+	if (direction == 'D') {
+		animationCounter += 0.2f;
+		if (animationCounter >= 4.0f) {
+			animationCounter = 0;
+			return;
+		}
+		currentClipRect = downClipRects[(int)animationCounter];
+	}
+	if (direction == 'U') {
+		animationCounter += 0.2f;
+		if (animationCounter >= 4.0f) {
+			animationCounter = 0;
+			return;
+		}
+		currentClipRect = upClipRects[(int)animationCounter];
+	}if (direction == 'L') {
+		animationCounter += 0.2f;
+		if (animationCounter >= 4.0f) {
+			animationCounter = 0;
+			return;
+		}
+		currentClipRect = leftClipRects[(int)animationCounter];
+	}if (direction == 'R') {
+		animationCounter += 0.2f;
+		if (animationCounter >= 4.0f) {
+			animationCounter = 0;
+			return;
+		}
+		currentClipRect = rightClipRects[(int)animationCounter];
+	}
+	if (direction == 'X') {
+		currentClipRect = downClipRects[0];
+	}
 }
 

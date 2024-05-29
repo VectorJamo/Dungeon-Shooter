@@ -12,6 +12,9 @@ private:
 
 	float dx, dy;
 	float speed;
+	char direction = 'D';
+
+	float animationCounter = 0.0f;
 
 private:
 	void playAnimation();

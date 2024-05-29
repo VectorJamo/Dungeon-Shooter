@@ -7,7 +7,8 @@
 GameState::GameState() {
 	map = new Tilemap("res/maps/dungeon.txt");
 
-	player = new Player("res/images/Soldier-Blue.png", 64, 64, 32, 32, map);
+	player = new Player("res/images/Soldier-Blue.png", map->getTileSize()*38, map->getTileSize()*38, 64, 64, map);
+	player->setCollisionRect(20, 20, 30, 30);
 }
 
 GameState::~GameState() {
@@ -20,13 +21,11 @@ void GameState::handleInput(SDL_Event& ev) {
 }
 
 void GameState::tick() {
-	
 	map->tick();
 	player->tick();
-
 }
 
 void GameState::render() {
-	map->render();
+	map->render(player->getXPos(), player->getYPos(), player->getWidth(), player->getHeight());
 	player->render();
 }

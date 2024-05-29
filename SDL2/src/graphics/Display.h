@@ -14,7 +14,6 @@ public:
 	~Display();
 
 	void clear(unsigned char r, unsigned char g, unsigned char b, unsigned char a);
-	void tick();
 	void show();
 
 	inline static SDL_Window* getWindowInstance() { return window; }
