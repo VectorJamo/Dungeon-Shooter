@@ -15,10 +15,10 @@ struct LaserAnimation {
 
 	int animationWorldX, animationWorldY;
 	
-	int animationSpeed = 1;
+	int animationSpeed = 2;
 	int animationCounter = 0;	
 	int currentFrame = 0;
-	int maxFrame = 11;
+	int maxFrames = 11;
 };
 
 class Laser: public Entity {

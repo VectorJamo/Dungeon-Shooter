@@ -96,8 +96,22 @@ void Laser::tick(int playerWorldX, int playerWorldY, int playerWidth, int player
 	}
 
 	// Play the laser explosion animations
-	
+	for (int i = 0; i < animations.size(); i++) {
+		animations[i]->animationCounter += animations[i]->animationSpeed;
+		if (animations[i]->animationCounter > 5) { // Play a new animation frame every 5/animationSpeed frames
+			animations[i]->animationCounter = 0;
+			animations[i]->currentFrame++;
 
+			animations[i]->currentClipRect = &animationClipRects[animations[i]->currentFrame];
+
+			if (animations[i]->currentFrame > animations[i]->maxFrames) {
+				delete animations[i];
+
+				animations.erase(animations.begin() + i);
+				std::cout << "|| Animation ended ||" << std::endl;
+			}
+		}
+	}
 }
 
 void Laser::render(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, char direction){
@@ -113,5 +127,15 @@ void Laser::render(int playerWorldX, int playerWorldY, int playerWidth, int play
 			SDL_RenderCopy(Display::getRendererInstance(), entityImage, NULL, &dest);
 		else
 			SDL_RenderCopy(Display::getRendererInstance(), entityImage2, NULL, &dest);
+	}
+
+	for (auto& animation : animations) {
+		int animationWorldX = animation->animationWorldX;
+		int animationWorldY = animation->animationWorldY;
+		int animationScreenX = animationWorldX - ((playerWorldX + playerWidth / 2) - Display::getScreenWidth() / 2);
+		int animationScreenY = animationWorldY - ((playerWorldY + playerHeight / 2) - Display::getScreenHeight() / 2);
+
+		SDL_Rect dest = { animationScreenX, animationScreenY, width*2, height*2 };
+		SDL_RenderCopy(Display::getRendererInstance(), LaserAnimation::animationSprite, animation->currentClipRect, &dest);
 	}
 }
