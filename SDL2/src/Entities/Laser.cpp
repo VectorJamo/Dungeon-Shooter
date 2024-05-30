@@ -2,13 +2,24 @@
 #include "../graphics/Display.h"
 
 #include <iostream>
+#include "../entities/CollisionChecker.h"
+
+SDL_Texture* LaserAnimation::animationSprite;
 
 Laser::Laser(const char* path, const char* path2, float x, float y, int width, int height, Tilemap* map): Entity(path, x, y, width, height) {
+	this->map = map;
 	entityImage2 = IMG_LoadTexture(Display::getRendererInstance(), path2); // 1 = vertical laser, 2 = horizontal laser
 	lazerSpeed = 10;
 
 	lazerTimer = 0;
 	canShoot = true;
+
+	animationClipRects = new SDL_Rect[12];
+	for (int i = 0; i < 12; i++) {
+		animationClipRects[i] = { i * 96, 0, 96, 96 };
+	}
+
+	LaserAnimation::animationSprite = IMG_LoadTexture(Display::getRendererInstance(), "res/images/explosion.png");
 }
 
 Laser::~Laser(){
@@ -21,6 +32,7 @@ void Laser::tick(){
 }
 
 void Laser::render(){
+
 }
 
 void Laser::tick(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, char direction) {
@@ -64,17 +76,28 @@ void Laser::tick(int playerWorldX, int playerWorldY, int playerWidth, int player
 			lazers[i]->lazerWorldY += lazerSpeed;
 		}
 
-		if (lazers[i]->lazerWorldX < 0 || lazers[i]->lazerWorldX > 90 * 32 || lazers[i]->lazerWorldY < 0 || lazers[i]->lazerWorldY > 90 * 32) {
+		if (checkCollision(lazers[i]->lazerWorldX, lazers[i]->lazerWorldY, 16, 16, map)) {
+			// Create a new laser animation object
+			LaserAnimation* animation = new LaserAnimation();
+			animation->currentClipRect = &animationClipRects[0];
+			animation->animationWorldX = lazers[i]->lazerWorldX;
+			animation->animationWorldY = lazers[i]->lazerWorldY;
+
+			animations.push_back(animation);
+			
+			// Delete the laser
 			indexsToDelete.push_back(i);
+
 			delete lazers[i];
+			lazers.erase(lazers.begin() + i);
 			std::cout << "Deleted the lazer's memory" << std::endl;
+
 		}
 	}
 
-	for (int& index : indexsToDelete) {
-		lazers.erase(lazers.begin() + index);
-		std::cout << "Removed the lazer from the vector" << std::endl;
-	}
+	// Play the laser explosion animations
+	
+
 }
 
 void Laser::render(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, char direction){

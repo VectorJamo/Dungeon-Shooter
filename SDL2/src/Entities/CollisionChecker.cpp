@@ -37,4 +37,25 @@ CollisionAxes checkCollision(Entity* entity, Tilemap* tileMap, float dx, float d
     }
     return type;
 }
+
+// For laser
+bool checkCollision(int worldX, int worldY, int width, int height, Tilemap* tileMap) {
+    for (int i = 0; i < tileMap->getMapRows(); i++) {
+        for (int j = 0; j < tileMap->getMapCols(); j++) {
+
+            unsigned char** tiles = tileMap->getTileMap();
+
+            if (tiles[i][j] != '0') {
+                int tileX = j * tileMap->getTileSize();
+                int tileY = i * tileMap->getTileSize();
+
+                if (!(worldX > tileX + tileMap->getTileSize() || worldX + width < tileX || worldY + height < tileY ||
+                    worldY > tileY + tileMap->getTileSize())) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
    

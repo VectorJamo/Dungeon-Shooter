@@ -1,8 +1,8 @@
 ﻿  Laser.cpp
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(40,54): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(41,55): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(88,49): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(88,49): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(88,56): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(88,56): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(52,54): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(53,55): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(111,49): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(111,49): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(111,56): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(111,56): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   SDL2.vcxproj -> C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\bin\SDL2\x64-Debug\SDL2.exe
