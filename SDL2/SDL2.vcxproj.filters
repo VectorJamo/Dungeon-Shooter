@@ -100,6 +100,12 @@
     <Image Include="res\images\roach.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="res\images\laser_horizontal.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\laser_vertical.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Text Include="res\maps\dungeon.txt" />

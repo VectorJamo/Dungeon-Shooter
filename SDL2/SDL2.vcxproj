@@ -183,6 +183,8 @@
   <ItemGroup>
     <Image Include="res\images\Bricks.png" />
     <Image Include="res\images\Dragonheart.png" />
+    <Image Include="res\images\laser_horizontal.png" />
+    <Image Include="res\images\laser_vertical.png" />
     <Image Include="res\images\roach.png" />
     <Image Include="res\images\Soldier-Blue.png" />
     <Image Include="res\images\Soldier-Red.png" />

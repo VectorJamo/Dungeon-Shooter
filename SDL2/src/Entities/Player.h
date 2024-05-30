@@ -27,5 +27,7 @@ public:
 
 	void tick() override;
 	void render() override;
+
+	inline char getDirection() { return direction; }
 };
 

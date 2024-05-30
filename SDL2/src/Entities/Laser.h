@@ -14,6 +14,9 @@ private:
 	SDL_Texture* entityImage2;
 	int lazerSpeed;
 	std::vector<ActiveLazer*> lazers;
+
+	int lazerTimer;
+	bool canShoot;
 	
 public:
 	Laser(const char* path, const char* path2, float x, float y, int width, int height, Tilemap* map);
@@ -22,7 +25,7 @@ public:
 	void tick() override;
 	void render() override;
 
-	void tick(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, char& direction);
-	void render(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, char& direction);
+	void tick(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, char direction);
+	void render(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, char direction);
 };
 
