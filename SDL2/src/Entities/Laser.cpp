@@ -17,6 +17,7 @@ Laser::~Laser(){
 }
 
 void Laser::tick(){
+
 }
 
 void Laser::render(){
@@ -45,22 +46,34 @@ void Laser::tick(int playerWorldX, int playerWorldY, int playerWidth, int player
 		}
 	}
 
-	for (auto& lazer : lazers) {
-		if (lazer->lazerDirection == 'U') {
-			lazer->lazerWorldY -= lazerSpeed;
+	std::vector<int> indexsToDelete;
+	for (int i = 0; i < lazers.size(); i++) {
+		if (lazers[i]->lazerDirection == 'U') {
+			lazers[i]->lazerWorldY -= lazerSpeed;
 		}
-		if (lazer->lazerDirection == 'D') {
-			lazer->lazerWorldY += lazerSpeed;
+		if (lazers[i]->lazerDirection == 'D') {
+			lazers[i]->lazerWorldY += lazerSpeed;
 		}
-		if (lazer->lazerDirection == 'L') {
-			lazer->lazerWorldX -= lazerSpeed;
+		if (lazers[i]->lazerDirection == 'L') {
+			lazers[i]->lazerWorldX -= lazerSpeed;
 		}
-		if (lazer->lazerDirection == 'R') {
-			lazer->lazerWorldX += lazerSpeed;
+		if (lazers[i]->lazerDirection == 'R') {
+			lazers[i]->lazerWorldX += lazerSpeed;
 		}
-		if (lazer->lazerDirection == 'X') {
-			lazer->lazerWorldY += lazerSpeed;
+		if (lazers[i]->lazerDirection == 'X') {
+			lazers[i]->lazerWorldY += lazerSpeed;
 		}
+
+		if (lazers[i]->lazerWorldX < 0 || lazers[i]->lazerWorldX > 90 * 32 || lazers[i]->lazerWorldY < 0 || lazers[i]->lazerWorldY > 90 * 32) {
+			indexsToDelete.push_back(i);
+			delete lazers[i];
+			std::cout << "Deleted the lazer's memory" << std::endl;
+		}
+	}
+
+	for (int& index : indexsToDelete) {
+		lazers.erase(lazers.begin() + index);
+		std::cout << "Removed the lazer from the vector" << std::endl;
 	}
 }
 
