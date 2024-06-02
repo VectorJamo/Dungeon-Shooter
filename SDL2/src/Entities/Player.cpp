@@ -39,6 +39,7 @@ Player::Player(const char* path, float x, float y, int width, int height, Tilema
 	dx = 0.0f;
 	dy = 0.0f;
 	speed = 5.0f;
+	health = 100;
 }
 
 Player::~Player() {
@@ -91,6 +92,14 @@ void Player::tick() {
 void Player::render() {
 	SDL_Rect dest = { Display::getScreenWidth()/2 - (int)width/2, Display::getScreenHeight()/2 - (int)height/2, width, height};
 	SDL_RenderCopy(Display::getRendererInstance(), entityImage, &currentClipRect, &dest);
+
+	SDL_Rect healthRect = { 20, 20, health, 30 };
+	SDL_Rect outlineRect = { 18, 18, 104, 34 };
+
+	SDL_SetRenderDrawColor(Display::getRendererInstance(), 255, 0, 0, 255);
+	SDL_RenderFillRect(Display::getRendererInstance(), &healthRect);
+	SDL_SetRenderDrawColor(Display::getRendererInstance(), 255, 255, 255, 255);
+	SDL_RenderDrawRect(Display::getRendererInstance(), &outlineRect);
 
 	dx = 0;
 	dy = 0;

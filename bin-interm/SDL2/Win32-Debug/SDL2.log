@@ -1,0 +1,88 @@
+﻿  Server.cpp
+  Client.cpp
+  Laser.cpp
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(52,54): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(53,55): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(62,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(99,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(125,49): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(125,49): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(125,56): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(125,56): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(138,62): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(138,62): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(138,72): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(138,72): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Cockroach.cpp
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Cockroach.cpp(11,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Cockroach.cpp(81,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Cockroach.cpp(82,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Cockroach.cpp(86,48): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Cockroach.cpp(86,48): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Cockroach.cpp(86,55): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Cockroach.cpp(86,55): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  CollisionChecker.cpp
+  Player.cpp
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Player.cpp(93,110): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Player.cpp(93,110): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Player.cpp(93,117): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Player.cpp(93,117): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Entity.cpp
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Entity.cpp(10,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Entity.cpp(11,17): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Entity.cpp(32,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Entity.cpp(35,17): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Entity.cpp(43,9): warning C4244: 'return': conversion from 'const float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Entity.cpp(46,9): warning C4244: 'return': conversion from 'const float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Entity.cpp(49,9): warning C4244: 'return': conversion from 'const float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Entity.cpp(52,9): warning C4244: 'return': conversion from 'const float' to 'int', possible loss of data
+  GameState.cpp
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(10,94): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(10,71): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(14,105): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(14,80): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(15,105): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(15,80): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(16,105): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(16,80): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(17,105): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(17,80): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Game.cpp
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\Game.cpp(81,29): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\Game.cpp(83,25): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+  Display.cpp
+  Application.cpp
+  StateManager.cpp
+  Macros.h
+  Tilemap.cpp
+  Generating Code...
+Laser.obj : error LNK2019: unresolved external symbol _SDL_GetKeyboardState referenced in function "public: void __thiscall Laser::tick(int,int,int,int,char)" (?tick@Laser@@QAEXHHHHD@Z)
+Player.obj : error LNK2001: unresolved external symbol _SDL_GetKeyboardState
+Laser.obj : error LNK2019: unresolved external symbol _SDL_RenderCopy referenced in function "public: void __thiscall Laser::render(int,int,int,int,char)" (?render@Laser@@QAEXHHHHD@Z)
+Cockroach.obj : error LNK2001: unresolved external symbol _SDL_RenderCopy
+Player.obj : error LNK2001: unresolved external symbol _SDL_RenderCopy
+Tilemap.obj : error LNK2001: unresolved external symbol _SDL_RenderCopy
+Laser.obj : error LNK2019: unresolved external symbol _IMG_LoadTexture referenced in function "public: __thiscall Laser::Laser(char const *,char const *,float,float,int,int,class Tilemap *)" (??0Laser@@QAE@PBD0MMHHPAVTilemap@@@Z)
+Entity.obj : error LNK2001: unresolved external symbol _IMG_LoadTexture
+Tilemap.obj : error LNK2001: unresolved external symbol _IMG_LoadTexture
+Player.obj : error LNK2019: unresolved external symbol _SDL_SetRenderDrawColor referenced in function "public: virtual void __thiscall Player::render(void)" (?render@Player@@UAEXXZ)
+Display.obj : error LNK2001: unresolved external symbol _SDL_SetRenderDrawColor
+Player.obj : error LNK2019: unresolved external symbol _SDL_RenderDrawRect referenced in function "public: virtual void __thiscall Player::render(void)" (?render@Player@@UAEXXZ)
+Player.obj : error LNK2019: unresolved external symbol _SDL_RenderFillRect referenced in function "public: virtual void __thiscall Player::render(void)" (?render@Player@@UAEXXZ)
+Entity.obj : error LNK2019: unresolved external symbol _SDL_DestroyTexture referenced in function "public: __thiscall Entity::~Entity(void)" (??1Entity@@QAE@XZ)
+Tilemap.obj : error LNK2001: unresolved external symbol _SDL_DestroyTexture
+Game.obj : error LNK2019: unresolved external symbol _SDL_PollEvent referenced in function "public: void __thiscall Game::run(void)" (?run@Game@@QAEXXZ)
+Game.obj : error LNK2019: unresolved external symbol _SDL_GetTicks referenced in function "public: void __thiscall Game::limitFPS(void)" (?limitFPS@Game@@QAEXXZ)
+Game.obj : error LNK2019: unresolved external symbol _SDL_Delay referenced in function "public: void __thiscall Game::limitFPS(void)" (?limitFPS@Game@@QAEXXZ)
+Display.obj : error LNK2019: unresolved external symbol _SDL_CreateWindow referenced in function "public: __thiscall Display::Display(int,int,char const *)" (??0Display@@QAE@HHPBD@Z)
+Display.obj : error LNK2019: unresolved external symbol _SDL_DestroyWindow referenced in function "public: __thiscall Display::~Display(void)" (??1Display@@QAE@XZ)
+Display.obj : error LNK2019: unresolved external symbol _SDL_CreateRenderer referenced in function "public: __thiscall Display::Display(int,int,char const *)" (??0Display@@QAE@HHPBD@Z)
+Display.obj : error LNK2019: unresolved external symbol _SDL_SetRenderDrawBlendMode referenced in function "public: __thiscall Display::Display(int,int,char const *)" (??0Display@@QAE@HHPBD@Z)
+Display.obj : error LNK2019: unresolved external symbol _SDL_RenderClear referenced in function "public: void __thiscall Display::clear(unsigned char,unsigned char,unsigned char,unsigned char)" (?clear@Display@@QAEXEEEE@Z)
+Display.obj : error LNK2019: unresolved external symbol _SDL_RenderPresent referenced in function "public: void __thiscall Display::show(void)" (?show@Display@@QAEXXZ)
+Display.obj : error LNK2019: unresolved external symbol _SDL_DestroyRenderer referenced in function "public: __thiscall Display::~Display(void)" (??1Display@@QAE@XZ)
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\Externals\SDL2-2.30.3\lib\x64\\SDL2_image.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\Externals\SDL2-2.30.3\lib\x64\\SDL2main.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\Externals\SDL2-2.30.3\lib\x64\\SDL2.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\bin\SDL2\Win32-Debug\SDL2.exe : fatal error LNK1120: 18 unresolved externals

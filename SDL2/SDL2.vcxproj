@@ -155,6 +155,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\entities\AnotherPlayer.cpp" />
+    <ClCompile Include="src\networking\Server.cpp" />
+    <ClCompile Include="src\networking\Client.cpp" />
     <ClCompile Include="src\entities\Laser.cpp" />
     <ClCompile Include="src\entities\Cockroach.cpp" />
     <ClCompile Include="src\entities\CollisionChecker.cpp" />
@@ -169,6 +172,9 @@
     <ClCompile Include="src\tilemap\Tilemap.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\entities\AnotherPlayer.h" />
+    <ClInclude Include="src\networking\Server.h" />
+    <ClInclude Include="src\networking\Client.h" />
     <ClInclude Include="src\entities\Laser.h" />
     <ClInclude Include="src\entities\Cockroach.h" />
     <ClInclude Include="src\entities\CollisionChecker.h" />
@@ -177,12 +183,14 @@
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\graphics\Display.h" />
     <ClInclude Include="src\entities\Entity.h" />
+    <ClInclude Include="src\networking\StateInfo.h" />
     <ClInclude Include="src\StateManager.h" />
     <ClInclude Include="src\tilemap\Tilemap.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\images\Bricks.png" />
     <Image Include="res\images\Dragonheart.png" />
+    <Image Include="res\images\explosion.png" />
     <Image Include="res\images\laser_horizontal.png" />
     <Image Include="res\images\laser_vertical.png" />
     <Image Include="res\images\roach.png" />

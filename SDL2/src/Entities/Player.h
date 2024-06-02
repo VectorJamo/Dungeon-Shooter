@@ -16,6 +16,8 @@ private:
 
 	float animationCounter = 0.0f;
 
+	int health;
+
 private:
 	void playAnimation();
 

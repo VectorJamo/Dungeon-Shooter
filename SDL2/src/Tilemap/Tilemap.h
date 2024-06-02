@@ -5,7 +5,7 @@
 
 class Tilemap {
 private:
-	static const int mapCols = 90, mapRows = 90;
+	static const int mapCols = 54, mapRows = 54;
 	static const int tileSize = 32;
 
 	unsigned char** tileMap;

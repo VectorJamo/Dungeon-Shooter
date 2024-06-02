@@ -4,12 +4,15 @@
 
 #include "Game.h"
 
-GameState::GameState() {
+#include "networking/Client.h"
+#include "networking/Server.h"
+
+GameState::GameState(bool isServer) {
+	this->isServer = isServer;
 	map = new Tilemap("res/maps/dungeon.txt");
 
-	player = new Player("res/images/Soldier-Blue.png", map->getTileSize()*38, map->getTileSize()*38, 64, 64, map);
+	player = new Player("res/images/Soldier-Blue.png", map->getTileSize()*10, map->getTileSize()*30, 64, 64, map);
 	player->setCollisionRect(20, 20, 30, 30);
-
 
 	roaches.emplace_back(new Cockroach("res/images/roach.png", map->getTileSize() * 30, map->getTileSize() * 30, 32, 32, map, 'D'));
 	roaches.emplace_back(new Cockroach("res/images/roach.png", map->getTileSize() * 30, map->getTileSize() * 30, 32, 32, map, 'U'));
@@ -17,6 +20,14 @@ GameState::GameState() {
 	roaches.emplace_back(new Cockroach("res/images/roach.png", map->getTileSize() * 30, map->getTileSize() * 30, 32, 32, map, 'R'));
 
 	lasers = new Laser("res/images/laser_vertical.png", "res/images/laser_horizontal.png", 0, 0, 16, 16, map);
+
+	anotherPlayer = new AnotherPlayer("res/images/Soldier-Red.png", 0, 0, 64, 64);
+	if (isServer) {
+		Server::setCurrentPlayerState(player->getXPos(), player->getYPos(), 100, false, 'D');
+	}
+	else {
+		Client::setCurrentPlayerState(player->getXPos(), player->getYPos(), 100, false, 'D');
+	}
 }
 
 GameState::~GameState() {
@@ -25,7 +36,6 @@ GameState::~GameState() {
 }
 
 void GameState::handleInput(SDL_Event& ev) {
-
 }
 
 void GameState::tick() {
@@ -36,6 +46,18 @@ void GameState::tick() {
 		roach->tick();
 
 	lasers->tick(player->getXPos(), player->getYPos(), player->getWidth(), player->getHeight(), player->getDirection());
+	anotherPlayer->tick();
+	
+	if (isServer) {
+		Server::setCurrentPlayerState(player->getXPos(), player->getYPos(), 100, false, 'D');
+		anotherPlayer->setXPos(Server::getAnotherPlayerInfo().x);
+		anotherPlayer->setYPos(Server::getAnotherPlayerInfo().y);
+	}
+	else {
+		Client::setCurrentPlayerState(player->getXPos(), player->getYPos(), 100, false, 'D');
+		anotherPlayer->setXPos(Client::getAnotherPlayerInfo().x);
+		anotherPlayer->setYPos(Client::getAnotherPlayerInfo().y);
+	}
 }
 
 void GameState::render() {
@@ -45,4 +67,5 @@ void GameState::render() {
 		roach->render(player->getXPos(), player->getYPos(), player->getWidth(), player->getHeight());
 
 	lasers->render(player->getXPos(), player->getYPos(), player->getWidth(), player->getHeight(), player->getDirection());
+	anotherPlayer->render(player->getXPos(), player->getYPos());
 }
