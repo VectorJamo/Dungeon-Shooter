@@ -24,6 +24,8 @@ Laser::Laser(const char* path, const char* path2, float x, float y, int width, i
 	}
 
 	LaserAnimation::animationSprite = IMG_LoadTexture(Display::getRendererInstance(), "res/images/explosion.png");
+	SDL_SetTextureAlphaMod(entityImage, 200);
+	SDL_SetTextureAlphaMod(entityImage2, 200);
 }
 
 Laser::~Laser(){

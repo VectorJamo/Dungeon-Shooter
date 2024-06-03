@@ -7,6 +7,8 @@
 #include "entities/Laser.h"
 #include "entities/AnotherPlayer.h"
 
+#include "effects/Light.h"
+
 #include <vector>
 
 class GameState: public StateManager {

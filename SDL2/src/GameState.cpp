@@ -62,6 +62,8 @@ void GameState::tick() {
 		anotherPlayer->setDirection(Client::getAnotherPlayerInfo().direction);
 		anotherPlayer->hasShot = Client::getAnotherPlayerInfo().hasShot;
 	}
+	Light::lightWorldX = player->getXPos() + player->getWidth()/2;
+	Light::lightWorldY = player->getYPos() + player->getHeight()/2;
 }
 
 void GameState::render() {

@@ -1,6 +1,7 @@
 #include "AnotherPlayer.h"
 #include "../graphics/Display.h"
 #include "../utils/Macros.h"
+#include "../effects/Light.h"
 
 #include <iostream>
 
@@ -95,6 +96,13 @@ void AnotherPlayer::render(int playerWorldX, int playerWorldY) {
 	int anotherPlayerScreenY = anotherPlayerWorldY - ((playerWorldY + 64 / 2) - Display::getScreenHeight() / 2);
 
 	SDL_Rect destRect = { anotherPlayerScreenX, anotherPlayerScreenY, 64, 64 };
+
+	float alphaMultiplayer = Light::intensity / pow(sqrt(pow((Light::lightWorldX - anotherPlayerWorldX), 2) + pow((Light::lightWorldY - anotherPlayerWorldY), 2)), 2);
+	float alpha = 255 * alphaMultiplayer;
+	if (alpha > 255)
+		alpha = 255;
+	SDL_SetTextureAlphaMod(entityImage, alpha);
+
 	SDL_RenderCopy(Display::getRendererInstance(), entityImage, &currentClipRect, &destRect);
 
 	SDL_Rect healthRect = { 20, 60, health, 30 };

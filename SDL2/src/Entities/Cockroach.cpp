@@ -2,6 +2,7 @@
 
 #include "CollisionChecker.h"
 #include "../graphics//Display.h"
+#include "../effects/Light.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -84,6 +85,13 @@ void Cockroach::render(int playerWorldX, int playerWorldY, int playerWidth, int 
 	int roachScreenY = roachWorldY - ((playerWorldY + playerHeight / 2) - Display::getScreenHeight() / 2);
 
 	SDL_Rect dest = { roachScreenX, roachScreenY, width, height };
+
+	float alphaMultiplayer = Light::intensity / pow(sqrt(pow((Light::lightWorldX - roachWorldX), 2) + pow((Light::lightWorldY - roachWorldY), 2)), 2);
+	float alpha = 255 * alphaMultiplayer;
+	if (alpha > 255)
+		alpha = 255;
+	SDL_SetTextureAlphaMod(entityImage, alpha);
+
 	SDL_RenderCopy(Display::getRendererInstance(), entityImage, &currentClipRect, &dest);
 
 	dx = 0;

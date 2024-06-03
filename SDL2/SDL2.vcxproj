@@ -155,6 +155,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\effects\Light.cpp" />
     <ClCompile Include="src\entities\AnotherPlayer.cpp" />
     <ClCompile Include="src\networking\Server.cpp" />
     <ClCompile Include="src\networking\Client.cpp" />
@@ -172,6 +173,7 @@
     <ClCompile Include="src\tilemap\Tilemap.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\effects\Light.h" />
     <ClInclude Include="src\entities\AnotherPlayer.h" />
     <ClInclude Include="src\networking\Server.h" />
     <ClInclude Include="src\networking\Client.h" />

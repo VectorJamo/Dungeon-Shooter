@@ -6,6 +6,8 @@
 #include <fstream>
 #include <string>
 
+#include "../effects/Light.h"
+
 Tilemap::Tilemap(const char* filePath) {
 	tileMap = new unsigned char*[mapRows];
 	for (int i = 0; i < mapRows; i++) {
@@ -39,6 +41,12 @@ void Tilemap::render(int playerWorldX, int playerWorldY, int playerWidth, int pl
 				
 				SDL_Rect src = { 0, 0, tileSize, tileSize };
 				SDL_Rect dest = { tileScreenX, tileScreenY, tileSize, tileSize };
+
+				float alphaMultiplayer = Light::intensity / pow(sqrt(pow((Light::lightWorldX - tileWorldX), 2) + pow((Light::lightWorldY - tileWorldY), 2)), 2);
+				float alpha = 255 * alphaMultiplayer;
+				if (alpha > 255)
+					alpha = 255;
+				SDL_SetTextureAlphaMod(brickTexture, alpha);
 
 				SDL_RenderCopy(Display::getRendererInstance(), brickTexture, &src, &dest);
 			}

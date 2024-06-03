@@ -40,6 +40,8 @@ Player::Player(const char* path, float x, float y, int width, int height, Tilema
 	dy = 0.0f;
 	speed = 5.0f;
 	health = 100;
+
+	SDL_SetTextureAlphaMod(entityImage, 220);
 }
 
 Player::~Player() {

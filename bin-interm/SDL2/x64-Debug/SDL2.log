@@ -1,12 +1,16 @@
-﻿  Laser.cpp
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(72,54): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(73,55): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(145,49): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(145,49): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(145,56): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(145,56): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(158,62): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(158,62): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(158,72): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\Laser.cpp(158,72): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+﻿  GameState.cpp
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(14,94): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(14,71): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(17,105): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(17,80): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(18,105): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(18,80): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(19,105): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(19,80): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(20,105): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(20,80): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(53,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(54,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(60,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\GameState.cpp(61,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   SDL2.vcxproj -> C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\bin\SDL2\x64-Debug\SDL2.exe
