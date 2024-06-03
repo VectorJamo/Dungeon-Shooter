@@ -79,14 +79,6 @@ void Client::cleanUpClient() {
 	WSACleanup();
 }
 
-void Client::forceSendPlayerState() {
-	int sendOk = sendto(clientSocket, (char*)&currentPlayer, sizeof(StateInfo), 0, (sockaddr*)(&serverInfo), sizeof(sockaddr));
-	if (sendOk == SOCKET_ERROR) {
-		std::cout << WSAGetLastError() << std::endl;
-		DEBUG_LOG("Error sending game state data to the client.");
-	}
-}
-
 void Client::setCurrentPlayerState(int x, int y, int health, bool hasShot, char direction) {
 	currentPlayer.x = x;
 	currentPlayer.y = y;

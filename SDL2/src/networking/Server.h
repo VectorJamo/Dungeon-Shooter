@@ -19,7 +19,6 @@ private:
 public:
 	static bool isServer;
 	static bool hasActiveClient;
-	static int shotCounter;
 
 	// Another player's state information 
 	static StateInfo anotherPlayer;
@@ -30,7 +29,6 @@ public:
 	static void createServer();
 	static void startUpServer();
 	static void cleanUpServer();
-	static void forceSendPlayerState();
 
 	static void setCurrentPlayerState(int x, int y, int health, bool hasShot, char direction);
 

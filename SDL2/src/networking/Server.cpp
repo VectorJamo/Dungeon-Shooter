@@ -19,7 +19,6 @@ int Server::clientInfoLength;
 bool Server::firstConnect = true;
 bool Server::isServer;
 bool Server::hasActiveClient = false;
-int Server::shotCounter = 0;
 
 StateInfo Server::currentPlayer;
 StateInfo Server::anotherPlayer;
@@ -83,20 +82,14 @@ void Server::startUpServer() {
 		else {
 			// TODO: Send game state data to the client
 			std::cout << "Sent the server's player's info" << std::endl;
-			while (shotCounter != 0) {
-				int sendOk = sendto(serverSocket, (char*)&currentPlayer, sizeof(StateInfo), 0, (sockaddr*)(&clientInfo), sizeof(sockaddr));
-				if (sendOk == SOCKET_ERROR) {
-					std::cout << WSAGetLastError() << std::endl;
-					DEBUG_LOG("Error sending game state data to the client.");
-				}
-				shotCounter--;
-			}
 			int sendOk = sendto(serverSocket, (char*)&currentPlayer, sizeof(StateInfo), 0, (sockaddr*)(&clientInfo), sizeof(sockaddr));
 			if (sendOk == SOCKET_ERROR) {
 				std::cout << WSAGetLastError() << std::endl;
 				DEBUG_LOG("Error sending game state data to the client.");
 			}
-
+			if (currentPlayer.hasShot) {
+				currentPlayer.hasShot = false;
+			}
 			// TODO: Parse the incoming data from client
 			int bytesIn = recvfrom(serverSocket, (char*)&anotherPlayer, sizeof(StateInfo), 0, (sockaddr*)&clientInfo, &clientInfoLength);
 			std::cout << "Got the client's player's info" << std::endl;
@@ -108,16 +101,6 @@ void Server::startUpServer() {
 			std::cout << "Another player info:" << std::endl;
 			std::cout << "X: " << anotherPlayer.x << std::endl;
 			std::cout << "Y: " << anotherPlayer.y << std::endl;
-		}
-	}
-}
-
-void Server::forceSendPlayerState() {
-	if (hasActiveClient) {
-		int sendOk = sendto(serverSocket, (char*)&currentPlayer, sizeof(StateInfo), 0, (sockaddr*)(&clientInfo), sizeof(sockaddr));
-		if (sendOk == SOCKET_ERROR) {
-			std::cout << WSAGetLastError() << std::endl;
-			DEBUG_LOG("Error sending game state data to the client.");
 		}
 	}
 }

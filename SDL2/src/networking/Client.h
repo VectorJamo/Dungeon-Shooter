@@ -24,7 +24,6 @@ public:
 	static void createClient(char* ip, int port);
 	static void startUpClient();
 	static void cleanUpClient();
-	static void forceSendPlayerState();
 
 	static void setCurrentPlayerState(int x, int y, int health, bool hasShot, char direction);
 

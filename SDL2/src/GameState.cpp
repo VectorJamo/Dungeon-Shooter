@@ -49,14 +49,14 @@ void GameState::tick() {
 	anotherPlayer->tick();
 	
 	if (isServer) {
-		Server::setCurrentPlayerState(player->getXPos(), player->getYPos(), 100, false, player->getDirection());
+		Server::setCurrentPlayerState(player->getXPos(), player->getYPos(), 100, Laser::hasShot, player->getDirection());
 		anotherPlayer->setXPos(Server::getAnotherPlayerInfo().x);
 		anotherPlayer->setYPos(Server::getAnotherPlayerInfo().y);
 		anotherPlayer->setDirection(Server::getAnotherPlayerInfo().direction);
 		anotherPlayer->hasShot = Server::getAnotherPlayerInfo().hasShot;
 	}
 	else {
-		Client::setCurrentPlayerState(player->getXPos(), player->getYPos(), 100, false, player->getDirection());
+		Client::setCurrentPlayerState(player->getXPos(), player->getYPos(), 100, Laser::hasShot, player->getDirection());
 		anotherPlayer->setXPos(Client::getAnotherPlayerInfo().x);
 		anotherPlayer->setYPos(Client::getAnotherPlayerInfo().y);
 		anotherPlayer->setDirection(Client::getAnotherPlayerInfo().direction);
@@ -64,6 +64,8 @@ void GameState::tick() {
 	}
 	Light::lightWorldX = player->getXPos() + player->getWidth()/2;
 	Light::lightWorldY = player->getYPos() + player->getHeight()/2;
+
+	Laser::hasShot = false;
 }
 
 void GameState::render() {

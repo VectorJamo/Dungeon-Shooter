@@ -35,6 +35,9 @@ private:
 	std::vector<LaserAnimation*> animations;
 
 public:
+	static bool hasShot;
+
+public:
 	Laser(const char* path, const char* path2, float x, float y, int width, int height, Tilemap* map);
 	~Laser();
 
