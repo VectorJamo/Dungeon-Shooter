@@ -49,14 +49,18 @@ void GameState::tick() {
 	anotherPlayer->tick();
 	
 	if (isServer) {
-		Server::setCurrentPlayerState(player->getXPos(), player->getYPos(), 100, false, 'D');
+		Server::setCurrentPlayerState(player->getXPos(), player->getYPos(), 100, false, player->getDirection());
 		anotherPlayer->setXPos(Server::getAnotherPlayerInfo().x);
 		anotherPlayer->setYPos(Server::getAnotherPlayerInfo().y);
+		anotherPlayer->setDirection(Server::getAnotherPlayerInfo().direction);
+		anotherPlayer->hasShot = Server::getAnotherPlayerInfo().hasShot;
 	}
 	else {
-		Client::setCurrentPlayerState(player->getXPos(), player->getYPos(), 100, false, 'D');
+		Client::setCurrentPlayerState(player->getXPos(), player->getYPos(), 100, false, player->getDirection());
 		anotherPlayer->setXPos(Client::getAnotherPlayerInfo().x);
 		anotherPlayer->setYPos(Client::getAnotherPlayerInfo().y);
+		anotherPlayer->setDirection(Client::getAnotherPlayerInfo().direction);
+		anotherPlayer->hasShot = Client::getAnotherPlayerInfo().hasShot;
 	}
 }
 

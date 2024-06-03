@@ -26,7 +26,7 @@ private:
 	Tilemap* map;
 	SDL_Texture* entityImage2;
 	int lazerSpeed;
-	std::vector<ActiveLazer*> lazers;
+	static std::vector<ActiveLazer*> lazers;
 
 	int lazerTimer;
 	bool canShoot;
@@ -41,6 +41,7 @@ public:
 	void tick() override;
 	void render() override;
 
+	static void addLaser(int worldX, int worldY, char direction);
 	void tick(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, char direction);
 	void render(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, char direction);
 };

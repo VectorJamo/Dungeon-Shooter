@@ -1,6 +1,8 @@
 #include "AnotherPlayer.h"
-
 #include "../graphics/Display.h"
+#include "../utils/Macros.h"
+
+#include <iostream>
 
 AnotherPlayer::AnotherPlayer(const char* path, float x, float y, int width, int height): Entity(path, x, y, width, height){
 	leftClipRects = new SDL_Rect[4];
@@ -31,6 +33,7 @@ AnotherPlayer::AnotherPlayer(const char* path, float x, float y, int width, int 
 	currentClipRect = downClipRects[0];
 
 	health = 100;
+	animationCounter = 0.0f;
 }
 
 AnotherPlayer::~AnotherPlayer() {
@@ -45,8 +48,42 @@ void AnotherPlayer::setHealth(int health){
 	this->health = health;
 }
 
-void AnotherPlayer::tick() {
 
+
+void AnotherPlayer::tick() {
+	if (direction == 'D') {
+		animationCounter += 0.2f;
+		if (animationCounter >= 4.0f) {
+			animationCounter = 0;
+			return;
+		}
+		currentClipRect = downClipRects[(int)animationCounter];
+	}
+	if (direction == 'U') {
+		animationCounter += 0.2f;
+		if (animationCounter >= 4.0f) {
+			animationCounter = 0;
+			return;
+		}
+		currentClipRect = upClipRects[(int)animationCounter];
+	}if (direction == 'L') {
+		animationCounter += 0.2f;
+		if (animationCounter >= 4.0f) {
+			animationCounter = 0;
+			return;
+		}
+		currentClipRect = leftClipRects[(int)animationCounter];
+	}if (direction == 'R') {
+		animationCounter += 0.2f;
+		if (animationCounter >= 4.0f) {
+			animationCounter = 0;
+			return;
+		}
+		currentClipRect = rightClipRects[(int)animationCounter];
+	}
+	if (direction == 'X') {
+		currentClipRect = downClipRects[0];
+	}
 }
 void AnotherPlayer::render() {
 
@@ -66,5 +103,4 @@ void AnotherPlayer::render(int playerWorldX, int playerWorldY) {
 	SDL_RenderFillRect(Display::getRendererInstance(), &healthRect);
 	SDL_SetRenderDrawColor(Display::getRendererInstance(), 255, 255, 255, 255);
 	SDL_RenderDrawRect(Display::getRendererInstance(), &outlineRect);
-
 }

@@ -34,11 +34,15 @@ Game::Game(int width, int height, const char* title) {
 
 		// TODO: Create the Client Socket Object
 		Client::createClient(ip, port);
+		Client::isClient = true;
+		Server::isServer = false;
 		networkingThread = new std::thread(Client::startUpClient);
 	}
 	else {
 		// Create the server socket object
 		Server::createServer();
+		Server::isServer = true;
+		Client::isClient = false;
 		networkingThread = new std::thread(Server::startUpServer);
 
 	}

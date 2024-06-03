@@ -1,10 +1,14 @@
 #include "Laser.h"
 #include "../graphics/Display.h"
+#include "../networking/Server.h"
+#include "../networking/Client.h"
 
-#include <iostream>
 #include "../entities/CollisionChecker.h"
 
+#include <iostream>
+
 SDL_Texture* LaserAnimation::animationSprite;
+std::vector<ActiveLazer*> Laser::lazers;
 
 Laser::Laser(const char* path, const char* path2, float x, float y, int width, int height, Tilemap* map): Entity(path, x, y, width, height) {
 	this->map = map;
@@ -35,6 +39,15 @@ void Laser::render(){
 
 }
 
+void Laser::addLaser(int worldX, int worldY, char direction){
+	ActiveLazer* lazer = new ActiveLazer();
+	lazer->lazerWorldX = worldX + 64 / 2 - 16 / 2;
+	lazer->lazerWorldY = worldY + 64 / 2 - 16 / 2;
+	lazer->lazerDirection = direction;
+
+	lazers.push_back(lazer);
+}
+
 void Laser::tick(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, char direction) {
 	const Uint8* keyState = SDL_GetKeyboardState(NULL);
 	if (!canShoot) {
@@ -46,6 +59,15 @@ void Laser::tick(int playerWorldX, int playerWorldY, int playerWidth, int player
 	}
 	if (keyState[SDL_SCANCODE_SPACE]) {
 		if (canShoot) {
+			if (Server::isServer) {
+				Server::currentPlayer.hasShot = true;
+				Server::shotCounter++;
+			}
+			else {
+				Client::currentPlayer.hasShot = true;
+				Client::forceSendPlayerState();
+			}
+
 			std::cout << "Added a laser" << std::endl;
 		
 			ActiveLazer* lazer = new ActiveLazer();

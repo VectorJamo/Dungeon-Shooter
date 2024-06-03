@@ -1,3 +1,4 @@
-﻿  Server.cpp
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\networking\Server.cpp(53,7): warning C4101: 'sendBuffer': unreferenced local variable
+﻿  AnotherPlayer.cpp
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\AnotherPlayer.cpp(92,26): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\SDL2\src\entities\AnotherPlayer.cpp(93,26): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   SDL2.vcxproj -> C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\SDL2\Dungeon-Shooter\bin\SDL2\x64-Debug\SDL2.exe
