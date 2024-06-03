@@ -61,11 +61,9 @@ void Laser::tick(int playerWorldX, int playerWorldY, int playerWidth, int player
 		if (canShoot) {
 			if (Server::isServer) {
 				Server::currentPlayer.hasShot = true;
-				Server::shotCounter++;
 			}
 			else {
 				Client::currentPlayer.hasShot = true;
-				Client::forceSendPlayerState();
 			}
 
 			std::cout << "Added a laser" << std::endl;
